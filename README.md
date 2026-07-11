@@ -1,16 +1,271 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Vex-15/Vex-15** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="assets/banner.svg" alt="Banner" width="100%" />
 
-Here are some ideas to get you started:
+<br/><br/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Developer;Go+Enthusiast;Building+in+Public;Open+Source+Learner;Software+Engineer" alt="Typing SVG" />
+
+<br/><br/>
+
+<a href="https://github.com/Vex-15"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=58A6FF" /></a>
+<a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" /></a>
+<a href="https://medium.com/@vexstack"><img src="https://img.shields.io/badge/Medium-0d1117?style=for-the-badge&logo=medium&logoColor=58A6FF" /></a>
+<a href="https://twitter.com/YOUR_TWITTER"><img src="https://img.shields.io/badge/Twitter-0d1117?style=for-the-badge&logo=x&logoColor=58A6FF" /></a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/github/followers/Vex-15?style=for-the-badge&color=1F6FEB&labelColor=0d1117&label=Followers" />
+<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/stars.json&style=for-the-badge&labelColor=0d1117" />
+<img src="https://komarev.com/ghpvc/?username=Vex-15&color=1F6FEB&style=for-the-badge&label=Profile+Views" />
+
+</div>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<!-- <br/><br/> -->
+
+## About Me
+
+```yaml
+name: Vedant Kowdiki
+role: Backend & Full Stack Developer
+location: Pune, India
+education: B.Tech CSE (Data Science)
+graduation: 2028
+languages: [Go, Python, Java, C++, TypeScript]
+interests: [Backend Engineering, Distributed Systems, System Design]
+```
+
+> If a design can't survive production traffic, it isn't finished yet.
+
+<br/>
+
+<!-- <table>
+<tr>
+<td width="33%" valign="top">
+
+**Focus**
+
+Backend engineering, distributed systems, and concurrency-first Go design.
+
+</td>
+<td width="33%" valign="top">
+
+**Currently Building**
+
+Go backend projects that model real production constraints, not tutorials.
+
+</td>
+<td width="33%" valign="top">
+
+**Open To**
+
+Backend/SWE internships (2027) and collaboration on Go-based systems.
+
+</td>
+</tr>
+</table> -->
+<!-- <br/><br/> -->
+
+<img src="assets/divider.svg" width="100%" />
+
+<!-- <br/><br/> -->
+
+## Tech Stack
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Languages**
+
+<img src="https://skillicons.dev/icons?i=go,cpp,java,py,js,ts" />
+
+</td>
+<td width="50%" valign="top">
+
+**Frontend**
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwind" />
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Database**
+
+<img src="https://skillicons.dev/icons?i=postgres,sqlite,mysql" />
+
+</td>
+<td valign="top">
+
+**Tools**
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux" />
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+**Backend**
+
+<img src="https://img.shields.io/badge/REST_APIs-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Concurrency-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Authentication-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Worker_Pools-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/JSON-1F6FEB?style=flat-square&labelColor=0d1117" />
+
+</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+
+## Featured Projects
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=Vex-15&repo=Filex&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" />
+
+<i>A worker-pool based concurrent downloader built to explore Go's concurrency primitives in a real CLI tool.</i>
+
+<br/>
+
+<img src="assets/filex-terminal.svg" width="100%" />
+
+<sub>Static preview — swap for a recorded terminal GIF once available (see SETUP.md).</sub>
+
+</td>
+<td width="50%" valign="top" align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=Vex-15&repo=Golang-Masterclass&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" />
+
+<i>A structured, concept-by-concept Go learning log — each concept paired with a working mini project.</i>
+
+</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+## Blog
+
+<table>
+<tr>
+<td align="center">
+
+**Latest article**
+
+### Building a Concurrent File Downloader in Go
+
+Notes from building FileX — worker pools, progress tracking, and the concurrency trade-offs along the way.
+
+**[Read on Medium →](https://medium.com/@vexstack)**
+
+</td>
+</tr>
+</table>
+
+<!-- BLOG-POST-LIST:START -->
+<!-- Future posts are auto-inserted here by .github/workflows/blog-post-workflow.yml -->
+<!-- BLOG-POST-LIST:END -->
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+## GitHub Statistics
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Vex-15/Vex-15/output/github-contribution-grid-snake-dark.svg" width="100%" />
+
+<br/><br/>
+
+
+<img src="https://github-readme-stats.vercel.app/api?username=Vex-15&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" height="165" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Vex-15&theme=tokyonight&hide_border=true&background=0d1117&ring=58A6FF&fire=58A6FF" height="165" />
+
+<br/><br/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vex-15&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF" height="165" />
+
+</div>
+
+<details>
+<summary><b>GitHub Trophies</b></summary>
+<br/>
+<div align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=Vex-15&theme=darkhub&no-frame=true&column=7&margin-w=10" />
+</div>
+</details>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+## Metrics Dashboard
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/Vex-15/Vex-15/main/metrics.svg" width="100%" />
+</div>
+
+<sub>Generated by <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a> via <code>.github/workflows/metrics.yml</code> — covers contributions, languages, repositories, achievements, and activity in a single compact dashboard.</sub>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+## Connect With Me
+
+<div align="center">
+
+<a href="https://github.com/Vex-15"><img src="https://skillicons.dev/icons?i=github" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://medium.com/@vexstack"><img src="https://skillicons.dev/icons?i=medium" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://twitter.com/YOUR_TWITTER"><img src="https://skillicons.dev/icons?i=twitter" /></a>
+
+</div>
+
+<br/><br/>
+
+<img src="assets/divider.svg" width="100%" />
+
+<br/><br/>
+
+<div align="center">
+
+Thanks for taking the time to look through this profile.
+
+**Always Building • Always Learning • Always Improving**
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=Vex-15&color=58A6FF&style=flat-square&label=Profile+Views" />
+
+</div>
