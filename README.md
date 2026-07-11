@@ -130,68 +130,6 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 
 <br/><br/>
 
-
-## Featured Projects
-
-<table>
-<tr>
-<td width="50%" valign="top" align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Vex-15&repo=Filex&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" />
-
-<i>A worker-pool based concurrent downloader built to explore Go's concurrency primitives in a real CLI tool.</i>
-
-<br/>
-
-<img src="assets/filex-terminal.svg" width="100%" />
-
-<sub>Static preview — swap for a recorded terminal GIF once available (see SETUP.md).</sub>
-
-</td>
-<td width="50%" valign="top" align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Vex-15&repo=Golang-Masterclass&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" />
-
-<i>A structured, concept-by-concept Go learning log — each concept paired with a working mini project.</i>
-
-</td>
-</tr>
-</table>
-
-<br/><br/>
-
-<img src="assets/divider.svg" width="100%" />
-
-<br/><br/>
-
-## Blog
-
-<table>
-<tr>
-<td align="center">
-
-**Latest article**
-
-### Building a Concurrent File Downloader in Go
-
-Notes from building FileX — worker pools, progress tracking, and the concurrency trade-offs along the way.
-
-**[Read on Medium →](https://medium.com/@vexstack)**
-
-</td>
-</tr>
-</table>
-
-<!-- BLOG-POST-LIST:START -->
-<!-- Future posts are auto-inserted here by .github/workflows/blog-post-workflow.yml -->
-<!-- BLOG-POST-LIST:END -->
-
-<br/><br/>
-
-<img src="assets/divider.svg" width="100%" />
-
-<br/><br/>
-
 ## GitHub Statistics
 
 <div align="center">
