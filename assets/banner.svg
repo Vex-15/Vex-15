@@ -1,0 +1,49 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#1F6FEB"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58A6FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+
+  <!-- subtle dot grid decoration, right side -->
+  <g opacity="0.18">
+    <g fill="#58A6FF">
+      <circle cx="880" cy="60" r="2"/><circle cx="920" cy="60" r="2"/><circle cx="960" cy="60" r="2"/><circle cx="1000" cy="60" r="2"/><circle cx="1040" cy="60" r="2"/><circle cx="1080" cy="60" r="2"/><circle cx="1120" cy="60" r="2"/>
+      <circle cx="880" cy="100" r="2"/><circle cx="920" cy="100" r="2"/><circle cx="960" cy="100" r="2"/><circle cx="1000" cy="100" r="2"/><circle cx="1040" cy="100" r="2"/><circle cx="1080" cy="100" r="2"/><circle cx="1120" cy="100" r="2"/>
+      <circle cx="880" cy="140" r="2"/><circle cx="920" cy="140" r="2"/><circle cx="960" cy="140" r="2"/><circle cx="1000" cy="140" r="2"/><circle cx="1040" cy="140" r="2"/><circle cx="1080" cy="140" r="2"/><circle cx="1120" cy="140" r="2"/>
+      <circle cx="880" cy="180" r="2"/><circle cx="920" cy="180" r="2"/><circle cx="960" cy="180" r="2"/><circle cx="1000" cy="180" r="2"/><circle cx="1040" cy="180" r="2"/><circle cx="1080" cy="180" r="2"/><circle cx="1120" cy="180" r="2"/>
+      <circle cx="880" cy="220" r="2"/><circle cx="920" cy="220" r="2"/><circle cx="960" cy="220" r="2"/><circle cx="1000" cy="220" r="2"/><circle cx="1040" cy="220" r="2"/><circle cx="1080" cy="220" r="2"/><circle cx="1120" cy="220" r="2"/>
+    </g>
+  </g>
+
+  <!-- terminal-style bracket motif -->
+  <text x="1000" y="150" font-family="JetBrains Mono, Consolas, monospace" font-size="90" fill="#58A6FF" opacity="0.12" font-weight="700">&lt;/&gt;</text>
+
+  <!-- left accent bar -->
+  <rect x="0" y="0" width="6" height="280" fill="url(#accent)"/>
+
+  <!-- name -->
+  <text x="70" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#E6EDF3" letter-spacing="1">VEDANT KOWDIKI</text>
+
+  <!-- subtitle -->
+  <text x="72" y="155" font-family="JetBrains Mono, Consolas, monospace" font-size="17" fill="#58A6FF" letter-spacing="3">BACKEND &amp; FULL STACK DEVELOPER</text>
+
+  <!-- divider line -->
+  <rect x="72" y="178" width="420" height="2" fill="url(#fade)"/>
+
+  <!-- tagline -->
+  <text x="72" y="212" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#8B949E">Go &#183; Distributed Systems &#183; Backend Architecture &#183; Pune, India</text>
+
+</svg>

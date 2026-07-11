@@ -1,0 +1,12 @@
+<svg width="1200" height="4" viewBox="0 0 1200 4" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divider-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#58A6FF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#1F6FEB" stop-opacity="0.9"/>
+      <stop offset="85%" stop-color="#58A6FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="4" fill="url(#divider-fade)"/>
+</svg>
