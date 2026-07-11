@@ -176,6 +176,7 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 
 <br/><br/>
 
+<table> <tr> <td align="center"> **Latest article** ### Building a Concurrent File Downloader in Go Notes from building FileX — worker pools, progress tracking, and the concurrency trade-offs along the way. **[Read on Medium →](https://medium.com/@vexstack)** </td> </tr> </table> <!-- BLOG-POST-LIST:START --> <!-- Future posts are auto-inserted here by .github/workflows/blog-post-workflow.yml --> <!-- BLOG-POST-LIST:END --> <br/><br/> <img src="assets/divider.svg" width="100%" /> <br/><br/>
 ## Connect With Me
 
 <div align="center">
