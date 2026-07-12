@@ -142,7 +142,7 @@ A structured record of learning backend development in Go — spanning language 
 
 ## Tech Stack
 
-<table>
+<table align="center">
 <tr>
 <td width="50%" valign="top">
 
@@ -252,26 +252,50 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 
 <img src="https://raw.githubusercontent.com/Vex-15/Vex-15/output/github-contribution-grid-snake-dark.svg" width="100%" />
 
-
-
-
-<img src="https://github-readme-stats.vercel.app/api?username=Vex-15&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" height="165" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Vex-15&theme=tokyonight&hide_border=true&background=0d1117&ring=58A6FF&fire=58A6FF" height="165" />
-
-
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vex-15&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF" height="165" />
-
 </div>
 
+<br/>
+
+<table align="center">
+<tr>
+<td align="center" valign="top" width="33%">
+
+<img src="https://github-stats-extended.vercel.app/api?username=Vex-15&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" width="100%" />
+
+</td>
+<td align="center" valign="top" width="33%">
+
+<img src="https://streak-stats.demolab.com/?user=Vex-15&theme=tokyonight&hide_border=true&background=0d1117&ring=58A6FF&fire=58A6FF" width="100%" />
+
+</td>
+<td align="center" valign="top" width="33%">
+
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Vex-15&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF" width="100%" />
+
+</td>
+</tr>
+</table>
+
+<img src="assets/divider.svg" width="100%" />
 
 <div align="center">
 
-Thanks for taking the time to look through this profile.
-
-**Always Building • Always Learning • Always Improving**
 
 <br/>
+
+### Thanks for stopping by
+
+<p>
+<i>"If a design can't survive production traffic, it isn't finished yet."</i>
+</p>
+
+<br/>
+
+<img src="https://img.shields.io/badge/Always_Building-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
+<img src="https://img.shields.io/badge/Always_Learning-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
+<img src="https://img.shields.io/badge/Always_Improving-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
+
+<br/><br/>
 
 <img src="https://komarev.com/ghpvc/?username=Vex-15&color=58A6FF&style=flat-square&label=Profile+Views" />
 
