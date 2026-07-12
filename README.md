@@ -72,6 +72,73 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 
 <img src="assets/divider.svg" width="100%" />
 
+## Featured Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3 align="center">FileX</h3>
+
+<p align="center"><i>Concurrent file downloader engineered in Go</i></p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+<img src="https://img.shields.io/badge/Goroutines-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Worker_Pools-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/HTTP-1F6FEB?style=flat-square&labelColor=0d1117" />
+</p>
+
+<br/>
+
+Explores backend concepts through the lens of concurrency, networking, and resource management. Built with goroutines and worker pools to download multiple files in parallel, with live progress tracking and graceful failure handling.
+
+**Core Capabilities**
+
+`Concurrent downloads via worker pool architecture`
+`Real-time per-file progress tracking`
+`Graceful failure handling with retry logic`
+`Modular, production-oriented Go design`
+
+<p align="center">
+<a href="https://github.com/Vex-15/FileX"><img src="https://img.shields.io/badge/View_Repository-58A6FF?style=for-the-badge&logo=github&logoColor=0d1117" /></a>
+</p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3 align="center">Golang Masterclass</h3>
+
+<p align="center"><i>Backend engineering, documented in Go</i></p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/gRPC-1F6FEB?style=flat-square&labelColor=0d1117" />
+</p>
+
+<br/>
+
+A structured record of learning backend development in Go — spanning language fundamentals, concurrency patterns, and production-style systems. Serves as both a learning log and a growing library of practical implementations.
+
+**Areas Covered**
+
+`Go fundamentals and concurrency patterns`
+`REST APIs and gRPC services`
+`PostgreSQL and SQLite integration`
+
+<p align="center">
+<a href="https://github.com/Vex-15/Golang-Masterclass"><img src="https://img.shields.io/badge/View_Repository-58A6FF?style=for-the-badge&logo=github&logoColor=0d1117" /></a>
+</p>
+
+</td>
+</tr>
+</table>
+
+<img src="assets/divider.svg" width="100%" />
+
+<!-- (existing tech stack table stays here, unchanged) -->
 
 ## Tech Stack
 
@@ -119,6 +186,36 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 <img src="https://img.shields.io/badge/Worker_Pools-1F6FEB?style=flat-square&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/gRPC-1F6FEB?style=flat-square&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/Rate_Limiting-1F6FEB?style=flat-square&labelColor=0d1117" />
+
+</td>
+</tr>
+</table>
+
+
+<img src="assets/divider.svg" width="100%" />
+
+## Competitive Programming
+
+<div align="center">
+
+<a href="https://leetcode.com/u/Vex-15/"><img src="https://img.shields.io/badge/LeetCode-0d1117?style=for-the-badge&logo=leetcode&logoColor=FFA116" /></a>
+<a href="https://codeforces.com/profile/Vex-15"><img src="https://img.shields.io/badge/Codeforces-0d1117?style=for-the-badge&logo=codeforces&logoColor=58A6FF" /></a>
+<a href="https://www.codechef.com/users/vedant_kowdiki"><img src="https://img.shields.io/badge/CodeChef-0d1117?style=for-the-badge&logo=codechef&logoColor=5B4638" /></a>
+
+</div>
+
+<br/>
+
+<table align="center">
+<tr>
+<td align="center" valign="top" width="50%">
+
+<a href="https://leetcode.com/u/Vex-15/"><img src="https://leetcard.jacoblin.cool/Vex-15?theme=dark&font=JetBrains%20Mono&extension=highest" width="100%" /></a>
+
+</td>
+<td align="center" valign="top" width="50%">
+
+<a href="https://codeforces.com/profile/Vex-15"><img src="https://codeforces-readme-stats.vercel.app/api/card?username=Vex-15&theme=dark" width="100%" /></a>
 
 </td>
 </tr>
