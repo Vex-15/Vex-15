@@ -2,18 +2,18 @@
 
 <img src="assets/banner.svg" alt="Banner" width="100%" />
 
-<br/><br/>
+
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Developer;Go+Enthusiast;Building+in+Public;Open+Source+Learner;Software+Engineer" alt="Typing SVG" />
 
-<br/><br/>
+
 
 <a href="https://github.com/Vex-15"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=58A6FF" /></a>
 <a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" /></a>
 <a href="https://medium.com/@vexstack"><img src="https://img.shields.io/badge/Medium-0d1117?style=for-the-badge&logo=medium&logoColor=58A6FF" /></a>
 <a href="https://twitter.com/YOUR_TWITTER"><img src="https://img.shields.io/badge/Twitter-0d1117?style=for-the-badge&logo=x&logoColor=58A6FF" /></a>
 
-<br/><br/>
+
 
 <img src="https://img.shields.io/github/followers/Vex-15?style=for-the-badge&color=1F6FEB&labelColor=0d1117&label=Followers" />
 <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/stars.json&style=for-the-badge&labelColor=0d1117" />
@@ -21,11 +21,11 @@
 
 </div>
 
-<br/><br/>
+
 
 <img src="assets/divider.svg" width="100%" />
 
-<!-- <br/><br/> -->
+<!--  -->
 
 ## About Me
 
@@ -68,11 +68,10 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 </td>
 </tr>
 </table> -->
-<!-- <br/><br/> -->
+<!--  -->
 
 <img src="assets/divider.svg" width="100%" />
 
-<!-- <br/><br/> -->
 
 ## Tech Stack
 
@@ -118,17 +117,37 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 <img src="https://img.shields.io/badge/Concurrency-1F6FEB?style=flat-square&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/Authentication-1F6FEB?style=flat-square&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/Worker_Pools-1F6FEB?style=flat-square&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/JSON-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/gRPC-1F6FEB?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Rate_Limiting-1F6FEB?style=flat-square&labelColor=0d1117" />
 
 </td>
 </tr>
 </table>
 
-<br/><br/>
+<img src="assets/divider.svg" width="100%" />
+
+## Latest Blog Posts
+
+<table>
+<tr>
+<td width="100%">
+
+### Building a Concurrent File Downloader in Go
+
+Notes from building **FileX** — worker pools, progress tracking, and the concurrency trade-offs along the way.
+
+**[Read on Medium →](https://medium.com/@vexstack)**
+
+</td>
+</tr>
+</table>
+
+<!-- BLOG-POST-LIST:START -->
+- [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2)
+<!-- BLOG-POST-LIST:END -->
 
 <img src="assets/divider.svg" width="100%" />
 
-<br/><br/>
 
 ## GitHub Statistics
 
@@ -136,55 +155,18 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 
 <img src="https://raw.githubusercontent.com/Vex-15/Vex-15/output/github-contribution-grid-snake-dark.svg" width="100%" />
 
-<br/><br/>
+
 
 
 <img src="https://github-readme-stats.vercel.app/api?username=Vex-15&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" height="165" />
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Vex-15&theme=tokyonight&hide_border=true&background=0d1117&ring=58A6FF&fire=58A6FF" height="165" />
 
-<br/><br/>
+
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vex-15&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF" height="165" />
 
 </div>
 
-<details>
-<summary><b>GitHub Trophies</b></summary>
-<br/>
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Vex-15&theme=darkhub&no-frame=true&column=7&margin-w=10" />
-</div>
-</details>
-
-<br/><br/>
-
-<img src="assets/divider.svg" width="100%" />
-
-<br/><br/>
-
-
-<table> <tr> <td align="center"> **Latest article** ### Building a Concurrent File Downloader in Go Notes from building FileX — worker pools, progress tracking, and the concurrency trade-offs along the way. **[Read on Medium →](https://medium.com/@vexstack)** </td> </tr> </table> <!-- BLOG-POST-LIST:START -->
-- [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2)
-<!-- BLOG-POST-LIST:END --> <br/><br/> <img src="assets/divider.svg" width="100%" /> <br/><br/>
-## Connect With Me
-
-<div align="center">
-
-<a href="https://github.com/Vex-15"><img src="https://skillicons.dev/icons?i=github" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://medium.com/@vexstack"><img src="https://skillicons.dev/icons?i=medium" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://twitter.com/YOUR_TWITTER"><img src="https://skillicons.dev/icons?i=twitter" /></a>
-
-</div>
-
-<br/><br/>
-
-<img src="assets/divider.svg" width="100%" />
-
-<br/><br/>
 
 <div align="center">
 
