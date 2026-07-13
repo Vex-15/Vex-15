@@ -11,7 +11,7 @@
 <a href="https://github.com/Vex-15"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=58A6FF" /></a>
 <a href="https://linkedin.com/in/vedant-kowdiki-/"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" /></a>
 <a href="https://medium.com/@vexstack"><img src="https://img.shields.io/badge/Medium-0d1117?style=for-the-badge&logo=medium&logoColor=58A6FF" /></a>
-<a href="https://twitter.com/YOUR_TWITTER"><img src="https://img.shields.io/badge/Twitter-0d1117?style=for-the-badge&logo=x&logoColor=58A6FF" /></a>
+<a href="https://twitter.com/vexstack"><img src="https://img.shields.io/badge/Twitter-0d1117?style=for-the-badge&logo=x&logoColor=58A6FF" /></a>
 
 
 
