@@ -285,18 +285,12 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 
 ### Thanks for stopping by
 
-<p>
-<i>"If a design can't survive production traffic, it isn't finished yet."</i>
-</p>
 
-<br/>
+
 
 <img src="https://img.shields.io/badge/Always_Building-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
 <img src="https://img.shields.io/badge/Always_Learning-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
 <img src="https://img.shields.io/badge/Always_Improving-0d1117?style=for-the-badge&labelColor=0d1117&color=58A6FF" />
 
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=Vex-15&color=58A6FF&style=flat-square&label=Profile+Views" />
 
 </div>
