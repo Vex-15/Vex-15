@@ -72,7 +72,7 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 
 <img src="assets/divider.svg" width="100%" />
 
-## Featured Projects
+## Currently Building
 
 <table>
 <tr>
