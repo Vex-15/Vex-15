@@ -107,7 +107,7 @@ Explores backend concepts through the lens of concurrency, networking, and resou
 </td>
 <td width="50%" valign="top">
 
-<h3 align="center">Golang Masterclass</h3>
+<h3 align="center">Golang</h3>
 
 <p align="center"><i>Backend engineering, documented in Go</i></p>
 
@@ -129,7 +129,7 @@ A structured record of learning backend development in Go — spanning language 
 `PostgreSQL and SQLite integration`
 
 <p align="center">
-<a href="https://github.com/Vex-15/Golang-Masterclass"><img src="https://img.shields.io/badge/View_Repository-58A6FF?style=for-the-badge&logo=github&logoColor=0d1117" /></a>
+<a href="https://github.com/Vex-15/Golang"><img src="https://img.shields.io/badge/View_Repository-58A6FF?style=for-the-badge&logo=github&logoColor=0d1117" /></a>
 </p>
 
 </td>
