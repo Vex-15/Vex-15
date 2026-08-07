@@ -250,7 +250,7 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Vex-15/Vex-15/output/github-contribution-grid-snake-dark.svg" width="100%" />
+<!-- <img src="https://raw.githubusercontent.com/Vex-15/Vex-15/output/github-contribution-grid-snake-dark.svg" width="100%" /> -->
 
 </div>
 
