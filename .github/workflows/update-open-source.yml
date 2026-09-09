@@ -1,0 +1,212 @@
+name: Update Open Source Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Open Source Stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          USERNAME = "Vex-15"
+          TOKEN = os.environ["GH_TOKEN"]
+
+          query = """
+          query($login: String!, $cursor: String) {
+            user(login: $login) {
+              pullRequests(
+                first: 100
+                after: $cursor
+                orderBy: {field: CREATED_AT, direction: DESC}
+              ) {
+                nodes {
+                  repository {
+                    name
+                    nameWithOwner
+                    url
+                  }
+                  mergedAt
+                  url
+                }
+                pageInfo {
+                  hasNextPage
+                  endCursor
+                }
+                totalCount
+              }
+            }
+          }
+          """
+
+          prs = []
+          cursor = None
+          total_count = 0
+
+          while True:
+              payload = json.dumps({
+                  "query": query,
+                  "variables": {
+                      "login": USERNAME,
+                      "cursor": cursor
+                  }
+              }).encode()
+
+              request = urllib.request.Request(
+                  "https://api.github.com/graphql",
+                  data=payload,
+                  headers={
+                      "Authorization": f"Bearer {TOKEN}",
+                      "Content-Type": "application/json",
+                      "User-Agent": "Vex-15-open-source-stats"
+                  }
+              )
+
+              with urllib.request.urlopen(request) as response:
+                  data = json.load(response)
+
+              if "errors" in data:
+                  raise RuntimeError(data["errors"])
+
+              pull_requests = data["data"]["user"]["pullRequests"]
+
+              if total_count == 0:
+                  total_count = pull_requests["totalCount"]
+
+              prs.extend(pull_requests["nodes"])
+
+              if not pull_requests["pageInfo"]["hasNextPage"]:
+                  break
+
+              cursor = pull_requests["pageInfo"]["endCursor"]
+
+          # Group PRs by repository
+          repos = {}
+
+          for pr in prs:
+              repo = pr["repository"]
+              name = repo["nameWithOwner"]
+
+              if name not in repos:
+                  repos[name] = {
+                      "name": repo["name"],
+                      "url": repo["url"],
+                      "prs": 0,
+                      "merged": 0
+                  }
+
+              repos[name]["prs"] += 1
+
+              if pr["mergedAt"]:
+                  repos[name]["merged"] += 1
+
+          total_merged = sum(repo["merged"] for repo in repos.values())
+
+          # Sort repositories by PR count, then merged count
+          sorted_repos = sorted(
+              repos.values(),
+              key=lambda x: (x["prs"], x["merged"]),
+              reverse=True
+          )
+
+          # Generate badges
+          os.makedirs("badges", exist_ok=True)
+
+          with open("badges/prs.json", "w") as f:
+              json.dump({
+                  "schemaVersion": 1,
+                  "label": "Pull Requests",
+                  "message": str(total_count),
+                  "color": "58A6FF"
+              }, f, indent=2)
+
+          with open("badges/merged-prs.json", "w") as f:
+              json.dump({
+                  "schemaVersion": 1,
+                  "label": "Merged PRs",
+                  "message": str(total_merged),
+                  "color": "58A6FF"
+              }, f, indent=2)
+
+          # Generate README table
+          table = [
+              "<!-- OPEN_SOURCE_STATS:START -->",
+              "",
+              "### Contributions",
+              "",
+              "| Repository | PRs | Merged |",
+              "|:---|---:|---:|"
+          ]
+
+          if sorted_repos:
+              for repo in sorted_repos:
+                  table.append(
+                      f'| [{repo["nameWithOwner"]}]({repo["url"]}) '
+                      f'| {repo["prs"]} | {repo["merged"]} |'
+                  )
+          else:
+              table.append("| *No contributions yet* | — | — |")
+
+          table.extend([
+              "",
+              "<!-- OPEN_SOURCE_STATS:END -->"
+          ])
+
+          new_section = "\n".join(table)
+
+          # Update README only between markers
+          readme_path = "README.md"
+
+          with open(readme_path, "r", encoding="utf-8") as f:
+              readme = f.read()
+
+          start = "<!-- OPEN_SOURCE_STATS:START -->"
+          end = "<!-- OPEN_SOURCE_STATS:END -->"
+
+          if start not in readme or end not in readme:
+              raise RuntimeError(
+                  "Open Source markers not found in README.md"
+              )
+
+          before = readme.split(start)[0]
+          after = readme.split(end, 1)[1]
+
+          updated_readme = before + new_section + after
+
+          with open(readme_path, "w", encoding="utf-8") as f:
+              f.write(updated_readme)
+
+          print(f"Total PRs: {total_count}")
+          print(f"Merged PRs: {total_merged}")
+          print(f"Repositories: {len(sorted_repos)}")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md badges/
+
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+          else
+            git commit -m "chore: update open source stats"
+            git push
+          fi
