@@ -2,7 +2,8 @@ name: Update Open Source Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 05:30 IST daily
+    # Every day at 00:00 UTC = 05:30 IST
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,11 +29,21 @@ jobs:
           USERNAME = "Vex-15"
           TOKEN = os.environ["GH_TOKEN"]
 
-          # Repositories we DON'T want to show
+          # ============================================================
+          # EXCLUDED REPOSITORY OWNERS
+          # ============================================================
+          # Only repositories owned by these two users are excluded.
+          # All other repositories are included.
+          # ============================================================
+
           EXCLUDED_OWNERS = {
-    "Vex-15",
-    "Arnav-Shende007"
-}
+              "Vex-15",
+              "Arnav-Shende007"
+          }
+
+          # ============================================================
+          # GITHUB GRAPHQL QUERY
+          # ============================================================
 
           query = """
           query($login: String!, $cursor: String) {
@@ -65,8 +76,13 @@ jobs:
           }
           """
 
+          # ============================================================
+          # FETCH ALL PULL REQUESTS
+          # ============================================================
+
           prs = []
           cursor = None
+          total_github_prs = 0
 
           while True:
 
@@ -76,7 +92,7 @@ jobs:
                       "login": USERNAME,
                       "cursor": cursor
                   }
-              }).encode()
+              }).encode("utf-8")
 
               request = urllib.request.Request(
                   "https://api.github.com/graphql",
@@ -91,36 +107,56 @@ jobs:
               with urllib.request.urlopen(request) as response:
                   data = json.load(response)
 
+              # Check for GraphQL errors
               if "errors" in data:
-                  raise RuntimeError(data["errors"])
+                  raise RuntimeError(
+                      json.dumps(data["errors"], indent=2)
+                  )
 
               connection = data["data"]["user"]["pullRequests"]
 
+              if total_github_prs == 0:
+                  total_github_prs = connection["totalCount"]
+
               prs.extend(connection["nodes"])
 
+              # Stop when all pages are fetched
               if not connection["pageInfo"]["hasNextPage"]:
                   break
 
               cursor = connection["pageInfo"]["endCursor"]
 
-          # ----------------------------------------
-          # Filter repositories
-          # ----------------------------------------
+          print("========================================")
+          print("GitHub PR Statistics")
+          print("========================================")
+          print(f"Total GitHub PRs: {total_github_prs}")
+          print(f"PRs fetched: {len(prs)}")
+          print("========================================")
+
+          # ============================================================
+          # FILTER PRs
+          # ============================================================
 
           filtered_prs = []
 
           for pr in prs:
 
-              owner = pr["repository"]["owner"]["login"]
+              repository = pr["repository"]
+              owner = repository["owner"]["login"]
 
               if owner in EXCLUDED_OWNERS:
+
+                  print(
+                      f'Excluded: {repository["nameWithOwner"]}'
+                  )
+
                   continue
 
               filtered_prs.append(pr)
 
-          # ----------------------------------------
-          # Group by repository
-          # ----------------------------------------
+          # ============================================================
+          # GROUP PRs BY REPOSITORY
+          # ============================================================
 
           repos = {}
 
@@ -140,12 +176,12 @@ jobs:
 
               repos[repo_name]["prs"] += 1
 
-              if pr["mergedAt"]:
+              if pr["mergedAt"] is not None:
                   repos[repo_name]["merged"] += 1
 
-          # ----------------------------------------
-          # Totals
-          # ----------------------------------------
+          # ============================================================
+          # CALCULATE TOTALS
+          # ============================================================
 
           total_prs = len(filtered_prs)
 
@@ -154,24 +190,32 @@ jobs:
               for repo in repos.values()
           )
 
-          print("--------------------------------")
-          print("Open Source Statistics")
-          print("--------------------------------")
-          print(f"Total PRs: {total_prs}")
-          print(f"Merged PRs: {total_merged}")
+          print("")
+          print("========================================")
+          print("OPEN SOURCE STATISTICS")
+          print("========================================")
+          print(f"Total external PRs: {total_prs}")
+          print(f"Total merged PRs: {total_merged}")
           print(f"Repositories: {len(repos)}")
-          print("--------------------------------")
+          print("========================================")
+
+          # ============================================================
+          # PRINT REPOSITORY STATISTICS
+          # ============================================================
 
           for repo in repos.values():
+
               print(
                   f'{repo["nameWithOwner"]}: '
                   f'{repo["prs"]} PRs / '
                   f'{repo["merged"]} merged'
               )
 
-          # ----------------------------------------
-          # Sort repositories
-          # ----------------------------------------
+          # ============================================================
+          # SORT REPOSITORIES
+          # ============================================================
+          # Merged PRs first, then total PRs.
+          # ============================================================
 
           sorted_repos = sorted(
               repos.values(),
@@ -182,13 +226,21 @@ jobs:
               reverse=True
           )
 
-          # ----------------------------------------
-          # Generate badges
-          # ----------------------------------------
+          # ============================================================
+          # CREATE BADGES DIRECTORY
+          # ============================================================
 
           os.makedirs("badges", exist_ok=True)
 
-          with open("badges/prs.json", "w") as f:
+          # ============================================================
+          # GENERATE TOTAL PR BADGE
+          # ============================================================
+
+          with open(
+              "badges/prs.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
 
               json.dump(
                   {
@@ -201,7 +253,15 @@ jobs:
                   indent=2
               )
 
-          with open("badges/merged-prs.json", "w") as f:
+          # ============================================================
+          # GENERATE MERGED PR BADGE
+          # ============================================================
+
+          with open(
+              "badges/merged-prs.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
 
               json.dump(
                   {
@@ -214,12 +274,16 @@ jobs:
                   indent=2
               )
 
-          # ----------------------------------------
-          # Generate README table
-          # ----------------------------------------
+          # ============================================================
+          # README MARKERS
+          # ============================================================
 
           START = "<!-- OPEN_SOURCE_STATS:START -->"
           END = "<!-- OPEN_SOURCE_STATS:END -->"
+
+          # ============================================================
+          # GENERATE README TABLE
+          # ============================================================
 
           table = [
               START,
@@ -235,7 +299,9 @@ jobs:
               for repo in sorted_repos:
 
                   table.append(
-                      f'| [{repo["nameWithOwner"]}]({repo["url"]}) '
+                      f'| '
+                      f'[{repo["nameWithOwner"]}]'
+                      f'({repo["url"]}) '
                       f'| {repo["prs"]} '
                       f'| {repo["merged"]} |'
                   )
@@ -253,25 +319,46 @@ jobs:
 
           generated_section = "\n".join(table)
 
-          # ----------------------------------------
-          # Update README
-          # ----------------------------------------
+          # ============================================================
+          # READ README
+          # ============================================================
 
-          with open("README.md", "r", encoding="utf-8") as f:
+          with open(
+              "README.md",
+              "r",
+              encoding="utf-8"
+          ) as f:
+
               readme = f.read()
 
+          # ============================================================
+          # CHECK README MARKERS
+          # ============================================================
+
           if START not in readme:
+
               raise RuntimeError(
-                  "OPEN_SOURCE_STATS:START marker not found"
+                  "OPEN_SOURCE_STATS:START marker "
+                  "not found in README.md"
               )
 
           if END not in readme:
+
               raise RuntimeError(
-                  "OPEN_SOURCE_STATS:END marker not found"
+                  "OPEN_SOURCE_STATS:END marker "
+                  "not found in README.md"
               )
 
+          # ============================================================
+          # REPLACE ONLY THE GENERATED SECTION
+          # ============================================================
+
           start_index = readme.index(START)
-          end_index = readme.index(END) + len(END)
+
+          end_index = (
+              readme.index(END)
+              + len(END)
+          )
 
           updated_readme = (
               readme[:start_index]
@@ -279,11 +366,26 @@ jobs:
               + readme[end_index:]
           )
 
-          with open("README.md", "w", encoding="utf-8") as f:
+          # ============================================================
+          # WRITE UPDATED README
+          # ============================================================
+
+          with open(
+              "README.md",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
               f.write(updated_readme)
 
+          print("")
           print("README updated successfully.")
+          print("========================================")
           PY
+
+      # ================================================================
+      # COMMIT CHANGES
+      # ================================================================
 
       - name: Commit changes
         run: |
