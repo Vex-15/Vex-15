@@ -2,8 +2,7 @@ name: Update Open Source Stats
 
 on:
   schedule:
-    # Every day at 05:30 IST
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" # 05:30 IST daily
   workflow_dispatch:
 
 permissions:
@@ -29,6 +28,13 @@ jobs:
           USERNAME = "Vex-15"
           TOKEN = os.environ["GH_TOKEN"]
 
+          # Repositories we DON'T want to show
+          EXCLUDED_OWNERS = {
+              "Vex-15",
+              "Arnav-Shende007",
+              "meshery"
+          }
+
           query = """
           query($login: String!, $cursor: String) {
             user(login: $login) {
@@ -42,6 +48,9 @@ jobs:
                     name
                     nameWithOwner
                     url
+                    owner {
+                      login
+                    }
                   }
                   mergedAt
                 }
@@ -59,9 +68,7 @@ jobs:
 
           prs = []
           cursor = None
-          total_count = 0
 
-          # Fetch ALL PRs
           while True:
 
               payload = json.dumps({
@@ -90,9 +97,6 @@ jobs:
 
               connection = data["data"]["user"]["pullRequests"]
 
-              if total_count == 0:
-                  total_count = connection["totalCount"]
-
               prs.extend(connection["nodes"])
 
               if not connection["pageInfo"]["hasNextPage"]:
@@ -100,20 +104,36 @@ jobs:
 
               cursor = connection["pageInfo"]["endCursor"]
 
-          print(f"Total PRs found: {total_count}")
+          # ----------------------------------------
+          # Filter repositories
+          # ----------------------------------------
 
-          # Group PRs by repository
-          repos = {}
+          filtered_prs = []
 
           for pr in prs:
+
+              owner = pr["repository"]["owner"]["login"]
+
+              if owner in EXCLUDED_OWNERS:
+                  continue
+
+              filtered_prs.append(pr)
+
+          # ----------------------------------------
+          # Group by repository
+          # ----------------------------------------
+
+          repos = {}
+
+          for pr in filtered_prs:
 
               repository = pr["repository"]
               repo_name = repository["nameWithOwner"]
 
               if repo_name not in repos:
+
                   repos[repo_name] = {
-                      "name": repository["name"],
-                      "nameWithOwner": repository["nameWithOwner"],
+                      "nameWithOwner": repo_name,
                       "url": repository["url"],
                       "prs": 0,
                       "merged": 0
@@ -124,52 +144,86 @@ jobs:
               if pr["mergedAt"]:
                   repos[repo_name]["merged"] += 1
 
-          # Total merged PRs
+          # ----------------------------------------
+          # Totals
+          # ----------------------------------------
+
+          total_prs = len(filtered_prs)
+
           total_merged = sum(
               repo["merged"]
               for repo in repos.values()
           )
 
-          print(f"Total merged PRs: {total_merged}")
+          print("--------------------------------")
+          print("Open Source Statistics")
+          print("--------------------------------")
+          print(f"Total PRs: {total_prs}")
+          print(f"Merged PRs: {total_merged}")
           print(f"Repositories: {len(repos)}")
+          print("--------------------------------")
 
+          for repo in repos.values():
+              print(
+                  f'{repo["nameWithOwner"]}: '
+                  f'{repo["prs"]} PRs / '
+                  f'{repo["merged"]} merged'
+              )
+
+          # ----------------------------------------
           # Sort repositories
+          # ----------------------------------------
+
           sorted_repos = sorted(
               repos.values(),
               key=lambda repo: (
-                  repo["prs"],
-                  repo["merged"]
+                  repo["merged"],
+                  repo["prs"]
               ),
               reverse=True
           )
 
-          # Create badges directory
+          # ----------------------------------------
+          # Generate badges
+          # ----------------------------------------
+
           os.makedirs("badges", exist_ok=True)
 
-          # Pull Requests badge
           with open("badges/prs.json", "w") as f:
-              json.dump({
-                  "schemaVersion": 1,
-                  "label": "Pull Requests",
-                  "message": str(total_count),
-                  "color": "58A6FF"
-              }, f, indent=2)
 
-          # Merged PRs badge
+              json.dump(
+                  {
+                      "schemaVersion": 1,
+                      "label": "Pull Requests",
+                      "message": str(total_prs),
+                      "color": "58A6FF"
+                  },
+                  f,
+                  indent=2
+              )
+
           with open("badges/merged-prs.json", "w") as f:
-              json.dump({
-                  "schemaVersion": 1,
-                  "label": "Merged PRs",
-                  "message": str(total_merged),
-                  "color": "58A6FF"
-              }, f, indent=2)
 
-          # Generate README section
-          start_marker = "<!-- OPEN_SOURCE_STATS:START -->"
-          end_marker = "<!-- OPEN_SOURCE_STATS:END -->"
+              json.dump(
+                  {
+                      "schemaVersion": 1,
+                      "label": "Merged PRs",
+                      "message": str(total_merged),
+                      "color": "58A6FF"
+                  },
+                  f,
+                  indent=2
+              )
+
+          # ----------------------------------------
+          # Generate README table
+          # ----------------------------------------
+
+          START = "<!-- OPEN_SOURCE_STATS:START -->"
+          END = "<!-- OPEN_SOURCE_STATS:END -->"
 
           table = [
-              start_marker,
+              START,
               "",
               "### Repository Contributions",
               "",
@@ -190,33 +244,35 @@ jobs:
           else:
 
               table.append(
-                  "| No contributions yet | — | — |"
+                  "| No external contributions yet | — | — |"
               )
 
           table.extend([
               "",
-              end_marker
+              END
           ])
 
           generated_section = "\n".join(table)
 
-          # Read README
+          # ----------------------------------------
+          # Update README
+          # ----------------------------------------
+
           with open("README.md", "r", encoding="utf-8") as f:
               readme = f.read()
 
-          if start_marker not in readme:
+          if START not in readme:
               raise RuntimeError(
                   "OPEN_SOURCE_STATS:START marker not found"
               )
 
-          if end_marker not in readme:
+          if END not in readme:
               raise RuntimeError(
                   "OPEN_SOURCE_STATS:END marker not found"
               )
 
-          # Replace only generated section
-          start_index = readme.index(start_marker)
-          end_index = readme.index(end_marker) + len(end_marker)
+          start_index = readme.index(START)
+          end_index = readme.index(END) + len(END)
 
           updated_readme = (
               readme[:start_index]
