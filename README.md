@@ -217,14 +217,9 @@ A structured record of learning backend development in Go — spanning language 
 
 | Repository | PRs | Merged |
 |:---|---:|---:|
-| [meshery/meshery](https://github.com/meshery/meshery) | 2 | 2 |
-| [kubescape/kubescape](https://github.com/kubescape/kubescape) | 1 | 1 |
-| [Arnav-Shende007/sentinel-ai](https://github.com/Arnav-Shende007/sentinel-ai) | 1 | 1 |
-| [Vex-15/kubescape](https://github.com/Vex-15/kubescape) | 1 | 0 |
-| [Vex-15/SIH26](https://github.com/Vex-15/SIH26) | 1 | 0 |
-| [meshery-extensions/helm-kanvas-snapshot](https://github.com/meshery-extensions/helm-kanvas-snapshot) | 1 | 0 |
-| [Vex-15/helm-kanvas-snapshot](https://github.com/Vex-15/helm-kanvas-snapshot) | 1 | 0 |
-| [Vex-15/portfolio](https://github.com/Vex-15/portfolio) | 1 | 0 |
+| <a href="https://github.com/meshery/meshery"><img src="https://avatars.githubusercontent.com/u/52376019?v=4" width="24" height="24" style="border-radius:50%; vertical-align:middle;">&nbsp; meshery/meshery</a> | 2 | 2 |
+| <a href="https://github.com/kubescape/kubescape"><img src="https://avatars.githubusercontent.com/u/100554170?v=4" width="24" height="24" style="border-radius:50%; vertical-align:middle;">&nbsp; kubescape/kubescape</a> | 1 | 1 |
+| <a href="https://github.com/meshery-extensions/helm-kanvas-snapshot"><img src="https://avatars.githubusercontent.com/u/200984402?v=4" width="24" height="24" style="border-radius:50%; vertical-align:middle;">&nbsp; meshery-extensions/helm-kanvas-snapshot</a> | 1 | 0 |
 
 <!-- OPEN_SOURCE_STATS:END -->
 
