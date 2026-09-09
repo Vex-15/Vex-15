@@ -38,10 +38,9 @@ graduation: 2028
 languages: [Go, Python, Java, C++, TypeScript]
 interests: [Backend Engineering, Distributed Systems, System Design]
 ```
-
 > If a design can't survive production traffic, it isn't finished yet.
 
-<br/>
+
 
 <!-- <table>
 <tr>
@@ -69,9 +68,8 @@ Backend/SWE internships (2027) and collaboration on Go-based systems.
 </tr>
 </table> -->
 <!--  -->
-
 <img src="assets/divider.svg" width="100%" />
-
+<!--
 ## Currently Building
 
 <table>
@@ -194,6 +192,101 @@ A structured record of learning backend development in Go — spanning language 
 
 <img src="assets/divider.svg" width="100%" />
 
+
+## Open Source
+
+<div align="center">
+
+<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/prs.json&style=for-the-badge&label=Pull%20Requests&labelColor=0d1117&color=58A6FF" />
+
+<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/merged-prs.json&style=for-the-badge&label=Merged%20PRs&labelColor=0d1117&color=58A6FF" />
+
+</div>
+
+<br/>
+
+<div align="center">
+
+*Contributing to real-world projects, learning from production codebases, and building in public.*
+
+</div>
+
+<br/>
+
+<!-- OPEN_SOURCE_STATS:START -->
+
+<table align="center">
+<tr>
+<td align="center" width="70%">
+
+### Repository Contributions
+
+</td>
+<td align="center" width="15%">
+
+### PRs
+
+</td>
+<td align="center" width="15%">
+
+### Merged
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+**[kubescape/kubescape](https://github.com/kubescape/kubescape)** <sub>Cloud Native Security · Go</sub>
+
+</td>
+<td align="center">
+
+**5**
+
+</td>
+<td align="center">
+
+**4**
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+**[example/project](https://github.com/example/project)** <sub>Open Source · Software Engineering</sub>
+
+</td>
+<td align="center">
+
+**3**
+
+</td>
+<td align="center">
+
+**2**
+
+</td>
+</tr>
+
+</table>
+
+<!-- OPEN_SOURCE_STATS:END -->
+
+<br/>
+
+<div align="center">
+
+<a href="https://github.com/Vex-15?tab=pullrequests">
+<img src="https://img.shields.io/badge/View_All_Contributions-58A6FF?style=for-the-badge&logo=github&logoColor=0d1117" />
+</a>
+
+</div>
+
+<img src="assets/divider.svg" width="100%" />
+
+
 ## Competitive Programming
 
 <div align="center">
@@ -221,8 +314,8 @@ A structured record of learning backend development in Go — spanning language 
 </tr>
 </table>
 
-<img src="assets/divider.svg" width="100%" />
 
+<!--
 ## Latest Blog Posts
 
 <table>
@@ -240,9 +333,8 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 </table>
 
 <!-- BLOG-POST-LIST:START -->
-- [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2)
+<!-- - [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2) -->
 <!-- BLOG-POST-LIST:END -->
-
 <img src="assets/divider.svg" width="100%" />
 
 
@@ -280,8 +372,6 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 
 <div align="center">
 
-
-<br/>
 
 ### Thanks for stopping by
 
