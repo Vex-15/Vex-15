@@ -281,7 +281,7 @@ Notes from building **FileX** — worker pools, progress tracking, and the concu
 </table>
 
 <!-- BLOG-POST-LIST:START -->
-<!-- - [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2) -->
+- [Building a Concurrent File Downloader in Go: A Practical Guide to Goroutines](https://medium.com/@vexstack/building-a-concurrent-file-downloader-in-go-a-practical-guide-to-goroutines-4071dd01f946?source=rss-16c3c76a7f97------2)
 <!-- BLOG-POST-LIST:END -->
 <img src="assets/divider.svg" width="100%" />
 
