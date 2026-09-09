@@ -197,80 +197,26 @@ A structured record of learning backend development in Go — spanning language 
 
 <div align="center">
 
-<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/prs.json&style=for-the-badge&label=Pull%20Requests&labelColor=0d1117&color=58A6FF" />
+<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/prs.json&style=for-the-badge&label=Pull%20Requests&labelColor=0d1117" />
 
-<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/merged-prs.json&style=for-the-badge&label=Merged%20PRs&labelColor=0d1117&color=58A6FF" />
+<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Vex-15/Vex-15/main/badges/merged-prs.json&style=for-the-badge&label=Merged%20PRs&labelColor=0d1117" />
 
 </div>
 
 <br/>
 
-<div align="center">
-
-*Contributing to real-world projects, learning from production codebases, and building in public.*
-
-</div>
+<p align="center">
+<i>Contributing to real-world projects, learning from production codebases, and building in public.</i>
+</p>
 
 <br/>
 
 <!-- OPEN_SOURCE_STATS:START -->
-
-<table align="center">
-<tr>
-<td align="center" width="70%">
-
 ### Repository Contributions
 
-</td>
-<td align="center" width="15%">
-
-### PRs
-
-</td>
-<td align="center" width="15%">
-
-### Merged
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-**[kubescape/kubescape](https://github.com/kubescape/kubescape)** <sub>Cloud Native Security · Go</sub>
-
-</td>
-<td align="center">
-
-**5**
-
-</td>
-<td align="center">
-
-**4**
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-**[example/project](https://github.com/example/project)** <sub>Open Source · Software Engineering</sub>
-
-</td>
-<td align="center">
-
-**3**
-
-</td>
-<td align="center">
-
-**2**
-
-</td>
-</tr>
-
-</table>
+| Repository | PRs | Merged |
+|:---|---:|---:|
+| Updating automatically... | — | — |
 
 <!-- OPEN_SOURCE_STATS:END -->
 
@@ -285,7 +231,6 @@ A structured record of learning backend development in Go — spanning language 
 </div>
 
 <img src="assets/divider.svg" width="100%" />
-
 
 ## Competitive Programming
 
